@@ -11,7 +11,7 @@ const {
 const removeExcludedFields = require('../text/removeExcludedFields');
 const { formatJson, normalizeObject } = require('../json');
 
-function subjectToSnapshot(subject, dataType = TYPE_JSON, config = {}) {
+async function subjectToSnapshot(subject, dataType = TYPE_JSON, config = {}) {
   let result = subject;
 
   if (typeof subject === 'object' && shouldNormalize(dataType, config)) {
@@ -28,8 +28,7 @@ function subjectToSnapshot(subject, dataType = TYPE_JSON, config = {}) {
       if (typeof result === 'object') {
         result = formatJson(result, undefined, 2);
       }
-
-      result = prettier.format(result.trim(), prettierConfig).trim();
+      result = (await prettier.format(result.trim(), prettierConfig)).trim();
     } catch(err) {
       throw new Error(`Cannot format subject: ${result}`);
     }

@@ -1,19 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`utils/keepKeysFromExpected ignoreExtraFields: false, ignoreExtraArrayItems: false 1`] = `
-Object {
+{
   "extra": "extra",
   "extraNull": null,
   "extraUndefined": undefined,
   "field": "value",
-  "items": Array [
-    Object {
-      "items": Array [
-        Object {
+  "items": [
+    {
+      "items": [
+        {
           "extra": "extra1",
           "name": "subitem1",
         },
-        Object {
+        {
           "extra": "extra2",
           "extraNull": null,
           "extraUndefined": undefined,
@@ -26,27 +26,27 @@ Object {
       ],
       "name": "item1",
     },
-    Object {
+    {
       "name": "item2",
     },
-    Object {
+    {
       "name": "item3",
     },
-    Object {
+    {
       "name": null,
     },
-    Object {
+    {
       "name": undefined,
     },
     null,
     undefined,
-    Object {
+    {
       "name": "item4",
     },
-    Object {
+    {
       "name": null,
     },
-    Object {
+    {
       "name": undefined,
     },
   ],
@@ -56,31 +56,31 @@ Object {
 `;
 
 exports[`utils/keepKeysFromExpected ignoreExtraFields: false, ignoreExtraArrayItems: true 1`] = `
-Object {
+{
   "extra": "extra",
   "extraNull": null,
   "extraUndefined": undefined,
   "field": "value",
-  "items": Array [
-    Object {
-      "items": Array [
-        Object {
+  "items": [
+    {
+      "items": [
+        {
           "extra": "extra1",
           "name": "subitem1",
         },
       ],
       "name": "item1",
     },
-    Object {
+    {
       "name": "item2",
     },
-    Object {
+    {
       "name": "item3",
     },
-    Object {
+    {
       "name": null,
     },
-    Object {
+    {
       "name": undefined,
     },
     null,
@@ -92,15 +92,15 @@ Object {
 `;
 
 exports[`utils/keepKeysFromExpected ignoreExtraFields: true, ignoreExtraArrayItems: false 1`] = `
-Object {
+{
   "field": "value",
-  "items": Array [
-    Object {
-      "items": Array [
-        Object {
+  "items": [
+    {
+      "items": [
+        {
           "name": "subitem1",
         },
-        Object {
+        {
           "extra": "extra2",
           "extraNull": null,
           "extraUndefined": undefined,
@@ -113,27 +113,27 @@ Object {
       ],
       "name": "item1",
     },
-    Object {
+    {
       "name": "item2",
     },
-    Object {
+    {
       "name": "item3",
     },
-    Object {
+    {
       "name": null,
     },
-    Object {
+    {
       "name": undefined,
     },
     null,
     undefined,
-    Object {
+    {
       "name": "item4",
     },
-    Object {
+    {
       "name": null,
     },
-    Object {
+    {
       "name": undefined,
     },
   ],
@@ -143,27 +143,27 @@ Object {
 `;
 
 exports[`utils/keepKeysFromExpected ignoreExtraFields: true, ignoreExtraArrayItems: true 1`] = `
-Object {
+{
   "field": "value",
-  "items": Array [
-    Object {
-      "items": Array [
-        Object {
+  "items": [
+    {
+      "items": [
+        {
           "name": "subitem1",
         },
       ],
       "name": "item1",
     },
-    Object {
+    {
       "name": "item2",
     },
-    Object {
+    {
       "name": "item3",
     },
-    Object {
+    {
       "name": null,
     },
-    Object {
+    {
       "name": undefined,
     },
     null,

@@ -16,7 +16,7 @@ const {
   getConfig
 } = require('../config');
 
-function matchTextSnapshot({
+async function matchTextSnapshot({
   commandName,
   dataType,
   options,
@@ -27,8 +27,8 @@ function matchTextSnapshot({
   const config = merge({}, cloneDeep(getConfig()), options);
   const snapshotFile = getSnapshotFilename(testFile);
   const expectedRaw = getSnapshot(snapshotFile, snapshotTitle, dataType);
-  let expected = applyReplace(expectedRaw, config.replace);
-  const actual = keepKeysFromExpected(subjectToSnapshot(subject, dataType, config), expected, config);
+  let expected = await applyReplace(expectedRaw, config.replace);
+  const actual = keepKeysFromExpected(await subjectToSnapshot(subject, dataType, config), expected, config);
 
   const exists = expected !== false;
 
